@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta name="author" content="Maximilien Ballesteros">
+		<meta name="description" content="The original Pacman game">
+		<meta name="keywords" content="Pacman, game, original">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta charset="utf-8">
+		<title>Pacman</title>
+		
+		<!-- CSS ressources -->
+		<link rel="stylesheet" href="style/style.css"></link>
+		<link rel="stylesheet" href="style/index.css"></link>
+		<link rel="stylesheet" href="style/footer.css"></link>
+		<link rel="stylesheet" href="style/component.css"></link>
+		<link rel="stylesheet" href="style/scrollbar.css"></link>
+
+		<!-- Application datas --> 
+		<script src="js/data/gameConfig.js"></script>
+		<script src="js/data/gameInfo.js"></script>
+		<script src="js/data/maze.js"></script>
+		
+		<!-- Exceptions -->
+		<script src="js/exception/InvalidDataTypeException.js"></script>
+		<script src="js/exception/IllegalStateException.js"></script>
+
+		<!-- Application model (mainly game components and sprites) -->
+		<script src="js/model/Component.js"></script>
+		<script src="js/model/Tile.js"></script>
+		<script src="js/model/Dot.js"></script>
+		<script src="js/model/Wall.js"></script>
+		<script src="js/model/Direction.js"></script>
+		<script src="js/model/Position.js"></script>
+		<script src="js/model/Layer.js"></script>
+		<script src="js/model/Maze.js"></script>
+		<script src="js/model/Game.js"></script>
+		<script src="js/model/Sprite.js"></script>
+		<script src="js/model/Pacman.js"></script>
+		<script src="js/model/Ghost.js"></script>
+
+		<!-- Application view -->
+		<script src="js/view/Creator.js"></script>
+		<script src="js/view/Loader.js"></script>
+		<script src="js/view/Listener.js"></script>
+		<script src="js/view/GameView.js"></script>
+		
+		<!-- Pacman controller and view -->
+		<script src="js/controller/PacmanCtrl.js"></script>
+		<script src="js/view/PacmanView.js"></script>
+	</head>
+	<body>
+		<main>
+			<h1 id="main-title"></h1>
+			<div id="skew-rectangle"></div>
+			<section id="game">
+				<div id="section-container">
+					<section id="score">
+						<h3>High Score</h3>
+						<div>
+							<p class="high-score"></p>
+							<p class="current-score">0</p>
+						</div>
+						<div id="pacmanLives"></div>
+					</section>
+					<section id="maze"></section>
+					<div id="bottom"></div>
+				</div>
+			</section>
+		</main>	
+
+		<footer>
+			<p>Created by <span id="author"></span></p>
+			<p>Id <span id="id"></span></p>
+			<p>Group <span id="group"></span></p>
+			<p>Professor <span id="professor"></span></p>
+		</footer>
+
+		<!-- Dimmers -->
+		<div id="dimmer-start">
+			<div class="dimmer">
+				<div class="dimmer-box">
+					<h3>Welcome to the Pacman game !</h3>
+					<p><span class="yellow">The rules are simple</span>: you have to collect all the yellow dots
+					without being eaten more than twice by the ghosts moving around the maze.</p>
+					<p><span class="yellow">Use the arrows</span>: <kbd>&#8592;<kbd>(left), <kbd>&#8594;</kbd>(right), <kbd>&#8593;</kbd>(up) and <kbd>&#8595;</kbd>(down) to
+					control the Pacman. Good luck !</p>
+					<button class="control-btn" id="start-btn">Start</button>
+				</div>
+			</div>
+		</div>
+		<div id="dimmer-gameOver">
+			<div class="dimmer">
+				<div class="dimmer-box">
+						<h3>Game Over !</h3>
+						<p>You've reached a score of <span class="current-score"></span></p>
+						<p>Your highest score: <span class="high-score"></span></p>
+						<button class="control-btn" id="retry-btn">Retry</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Application controller -->
+		<script src="js/controller/GameCtrl.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

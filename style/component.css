@@ -1,0 +1,96 @@
+.component{
+	width: 15px;
+	height: 15px;
+
+	position: absolute;
+}
+
+.wall{
+	position: absolute;
+
+	background-color: var(--secondary-color);
+	border: 1px solid var(--main-color);
+}
+
+.traversable-wall{
+	height: 2px;
+	width: 100%;
+
+	position: absolute;
+	left: 0;
+	top: calc(50% - 1px);
+	
+	background-color: var(--secondary-color);
+}
+
+.circle-pacDot{
+	width: 6px; 
+	height: 6px;
+
+	position: absolute;
+	left: calc(50% - 3px);
+	top: calc(50% - 3px);
+
+	background-color: var(--pacDot-color);
+	border-radius: 50%;
+}
+
+.circle-energizer{
+	width: 8px;
+	height: 8px;
+	
+	position: absolute;
+	left: calc(50% - 4px);
+	top: calc(50% - 4px);
+
+	background-color: var(--energizer-color);
+	border-radius: 50%;
+}
+
+.circle-wall{
+	width: 5px;
+	height: 5px;
+
+	position: absolute;
+	left: calc(50% - 2.5px);
+	top: calc(50% - 2.5px);
+
+	background-color: var(--main-color);
+	border-radius: 50%;
+}
+
+#_21 > div{
+	background-image: url("../images/pacmanStuff.png");
+	background-position: 0px 0px;
+}
+
+#_22 > div{ /* blinky */ 
+	background-image: url("../images/pacmanStuff.png");
+	background-position: 0px -82px;
+}
+
+#_23 > div{ /* pinky */
+	background-image: url("../images/pacmanStuff.png");
+	background-position: 0px -102px;
+}
+
+#_24 > div{ /* inky */
+	background-image: url("../images/pacmanStuff.png");
+	background-position: 0px -122px;
+}
+
+#_25 > div{ /* clyde */
+	background-image: url("../images/pacmanStuff.png");
+	background-position: 0px -142px;
+}
+
+.heart{
+	position: absolute;
+	background-image: url(../images/heart.svg);
+	background-size: 100%;
+}
+
+.empty-heart{
+	position: absolute;
+	background-image: url("../images/empty-heart.svg");
+}

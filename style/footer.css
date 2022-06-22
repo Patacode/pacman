@@ -1,0 +1,9 @@
+footer{
+	background-color: var(--main-color);
+	padding: 5px 10px;
+	font-size: 0.8em;
+}
+
+footer span{
+	color: var(--secondary-color);
+}

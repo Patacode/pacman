@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&display=swap');
+
+:root{
+	/* general color */
+	--main-color: #340D09;
+	--secondary-color: #950E17;
+
+	--main-bg-color: #F37C84;
+	--secondary-bg-color: #EA202C;
+	
+	/* game component */
+	--pacDot-color: yellow;
+	--energizer-color: #ff7007; 
+	--heart-color: red;
+
+	/* game sprites */
+	--pacman-color: #FDE281;
+	--blinky-color: red;
+	--pinky-color: pink;
+	--inky-color: blue;
+	--clyde-color: orange;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	color: #FFF;
+	box-sizing: border-box;
+
+	font-family: 'Kiwi Maru', serif;
+}
+
